@@ -15,6 +15,12 @@ int lcm(int a, int b)
   }
   return res;
 }
+
+#more efficient solution
+int lcm(int a, int b)
+{
+  return (axb)/(gcm(a,b));
+}
  
 
 int main()
