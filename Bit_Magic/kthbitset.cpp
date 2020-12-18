@@ -1,20 +1,20 @@
-// CPP program to check if k-th bit 
-// of a given number is set or not 
-#include <iostream> 
-using namespace std; 
+#include<iostream>
+using namespace std;
 
-void isKthBitSet(int n, int k) 
-{ 
-	if (n & (1 << (k - 1))) 
-		cout << "SET"; 
+//method 1:
+void kthBit(int n)
+{
+	if(n & (1<<k-1) != 0)
+		cout<<"yes kth bit is set";
 	else
-		cout << "NOT SET"; 
-} 
+		cout<<"no it is not set";
+}
 
-// Driver code 
-int main() 
-{ 
-	int n = 5, k = 1; 
-	isKthBitSet(n, k); 
-	return 0; 
-} 
+//method 2: moving the kthbit to the last position 
+void kthBit(int n)
+{
+	if((n>>k-1)&1 == 1)
+		cout<<"yes kth bit is set";
+	else
+		cout<<"no it is not set";
+}
