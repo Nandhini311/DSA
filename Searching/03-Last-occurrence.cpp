@@ -4,8 +4,10 @@ using namespace std;
 int LastOccurrence(int arr[],int n,int x)
 {
    int low=0, high=n-1;
+	
    while(low<high)
    {
+    {
      int mid=(low+high)/2;
      if(arr[mid]<x)
         return LastOccurrence(arr, mid+1, high);
@@ -16,6 +18,8 @@ int LastOccurrence(int arr[],int n,int x)
        return mid;
     else 
        return LastOccurrence(arr, mid+1,hight);
+}
+return -1;
 }
 
 int main()
