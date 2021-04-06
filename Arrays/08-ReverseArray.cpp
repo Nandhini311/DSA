@@ -5,6 +5,6 @@ void ReverseArray(int arr[])
    {
      swap(arr[low],arr[high]);
      low++;
-     high++;
+     high--;
    }
 }
